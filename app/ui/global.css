@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  background-color: #10212f;
+  color: #fff;
+}
+
 input[type='number'] {
   -moz-appearance: textfield;
   appearance: textfield;
@@ -15,4 +20,94 @@ input[type='number']::-webkit-inner-spin-button {
 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+
+.Custom__Sidebar {
+  color: aliceblue
+}
+
+@keyframes menu-animation {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.menu {
+  animation: menu-animation 0.5s ease-in-out;
+}
+
+.menu-item {
+  animation: menu-animation 0.5s ease-in-out;
+}
+
+.menu-item:hover {
+  transform: translateY(-100%);
+}
+
+.Custom__List>svg {
+  width: 24px;
+  height: 14px;
+}
+
+
+.Custom__App {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  margin-top: 50px;
+}
+
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]+label::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 2px solid #3498db;
+  /* Checkbox border color */
+  margin-right: 0.5em;
+  background-color: white;
+  vertical-align: middle;
+}
+
+input[type="checkbox"]:checked+label::before {
+  content: counter(checkbox-counter);
+  counter-increment: checkbox-counter;
+  background-color: #3498db;
+  /* Checked checkbox color */
+  color: white;
+  text-align: center;
+  line-height: 1em;
+}
+
+#firstRow {
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+
+#secondRow>article>h2 {
+  color: #fb7474;
+  margin-bottom: 1rem;
+}
+
+
+#firstArticle > p {
+  color: #007bff;
+}
+
+#thirdArticle > p {
+  color: #00ddff;
+}
+
+section > article > p {
+  margin-bottom: 1rem;
 }
