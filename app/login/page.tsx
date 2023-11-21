@@ -1,4 +1,6 @@
+'use client'
 import { lusitana } from "@/app/ui/fonts";
+import CustomLoginForm from "@/components/customLoginForm/CustomLoginForm";
 
 export default function Page() {
   
@@ -8,16 +10,16 @@ export default function Page() {
    `}
     >
       <section
-        className="flex justify-around items-center gap-8"
+        className="flex flex-col justify-around items-center gap-8"
         style={{
           position: "absolute",
           top: "20%",
           left: "50%",
-          transform: "translate(-50%, -20%)",
+          transform: "translate(-50%, -5%)",
         }}
       >
         <article
-          className="bg-[#0d2b49] rounded-[9px] border border-[#0059b2] p-[1.5rem]"
+          className="bg-[#0d2b49] text-center rounded-[9px] border border-[#0059b2] p-[1.5rem]"
           style={{
             boxShadow: "0 1px 4px #0059b2, inset 0 2px 4px #0d2b49",
           }}
@@ -31,11 +33,16 @@ export default function Page() {
             </p>
           </div>
         </article>
-        <article className="">
+        <article className="text-center">
           <p>
           👥 Connect & Engage: Connect with fellow EgaExplorers, share 
           insights, and be part of a vibrant community that celebrates curiosity.
           </p>
+        </article>
+        <article>
+          <CustomLoginForm />
+        </article>
+        <article>
         </article>
       </section>
     </main>

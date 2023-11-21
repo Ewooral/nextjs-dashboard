@@ -44,10 +44,10 @@ const LeftSidebar: React.FC = () => {
 
   return (
     <div
-      className="flex backdrop-blur-sm bg-[#141a1f] text-white w-[fit-content] h-screen flex-col
+      className="hidden md:flex backdrop-blur-sm bg-[#141a1f] text-white w-[fit-content] h-screen flex-col
     justify-between items-start mr-4 "
     >
-      <ul className="w-[100%] mt-[4.5rem] mr-4">
+      <ul className="w-[100%] mr-4">
         {ojbMenuList.map((element: any, index: any) => (
           <Link
             key={index}

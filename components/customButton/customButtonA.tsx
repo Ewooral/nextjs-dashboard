@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import LockOpenRoundedIcon from "@mui/icons-material/LockOpenRounded";
 import Link from "next/link";
 
-export const CustomButton: React.FC<MyProps> = (props) => {
+export const CustomButtonA: React.FC<MyProps> = (props) => {
   const buttonRef = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
@@ -29,16 +29,8 @@ export const CustomButton: React.FC<MyProps> = (props) => {
   };
 
   return (
-    <Link
-      href="/login"
-      className="flex justify-start items-center bg-[#0d2b49] w-fit mt-4 rounded-[9px] border-2 border-[#0059b2] p-1"
-    >
-      <article className="">
-        <LockOpenRoundedIcon
-          sx={{ fontSize: 17, marginBottom: "6px", color: "#fffb00" }}
-        />
-      </article>
-      <button ref={buttonRef} onClick={handleClick} className="p-1">
+    
+      <button ref={buttonRef} onClick={props.onClick} className="p-1">
         {``}
         <span className="md:inline lg:inline xl:inline">{props.name}</span>
         <span className="hidden sm:inline">
@@ -46,6 +38,17 @@ export const CustomButton: React.FC<MyProps> = (props) => {
           or Press Enter key
         </span>
       </button>
-    </Link>
+  
   );
 };
+
+
+/**
+ * 
+ *     The initial count value is retrieved from localStorage when the component mounts. If the value is not present, it defaults to 0.
+
+The useEffect hook is used to update countRef.current whenever the count state changes. Additionally, it stores the count value in localStorage, making it persistent across refreshes.
+Now, the count value will be retrieved from localStorage when the component mounts, and changes to the count will be stored in localStorage, 
+ensuring persistence across browser refreshes. Keep in mind that localStorage has a storage limit (usually around 5 MB), and the data is stored as a string, 
+so you might need to serialize and deserialize more complex data structures if necessary.
+ */

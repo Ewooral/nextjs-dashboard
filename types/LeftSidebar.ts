@@ -1,3 +1,5 @@
+// import { Url } from "url";
+
 type LeftSidebar = {
     dashboard: string;
     navigation: string;
@@ -6,6 +8,7 @@ type LeftSidebar = {
     image: HTMLImageElement;
 
 }
+
 type OjbMenuList = {
     title: string;
     href: string;
@@ -14,3 +17,11 @@ type OjbMenuList = {
 }[]
 
 type LeftSidebarWithoutImage = Omit<LeftSidebar, 'image'>;
+
+type Url = any;
+
+type MenuList = {
+    name: string | React.JSX.Element;
+    icon?: HTMLImageElement;
+    path?: string | Url;
+}[]

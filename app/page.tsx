@@ -1,16 +1,17 @@
 "use client";
 import { CustomButton } from "@/components/customButton/CustomButton";
+import { CustomButtonA } from "@/components/customButton/customButtonA";
 import { lusitana } from "@/app/ui/fonts";
 import { CustomCheckbox } from "@/components/customCheckbox/CustomCheckbox";
 import CustomGrid from "@/components/customGrid/CustomGrid";
-export default function Page() {
+import Counter from "@/components/otherComponents/Counter";
 
+export default function Page() {
   return (
     <main
       className={`${lusitana.className} 
    `}
     >
-
       <section
         className="flex flex-col justify-around items-center gap-8"
         style={{
@@ -39,26 +40,29 @@ export default function Page() {
         </article>
         <article className="">
           <p>
-          👥 Connect & Engage: Connect with fellow EgaExplorers, share 
-          insights, and be part of a vibrant community that celebrates curiosity.
+            👥 Connect & Engage: Connect with fellow EgaExplorers, share
+            insights, and be part of a vibrant community that celebrates
+            curiosity.
           </p>
-          <CustomButton />
+          <CustomButton name="Login" />
+          <CustomButtonA name="Register" />
         </article>
-         {/* GRID */}
-         {/* This is for rows */}
-         <article className="grid grid-cols-3 gap-1 container p-7 mx-auto text-center">
-        <CustomGrid  />
+        {/* GRID */}
+        {/* This is for rows */}
+        <article className="grid grid-cols-3 gap-1 container p-7 mx-auto text-center">
+          <CustomGrid />
         </article>
         {/* This is for columns */}
         <article className="grid grid-rows-3 grid-flow-col gap-1 container p-7 mx-auto text-center">
-        <CustomGrid  />
+          <CustomGrid />
         </article>
         <article>
           <CustomCheckbox />
+        </article>
+        <article>
+          <Counter />
         </article>
       </section>
     </main>
   );
 }
-
-

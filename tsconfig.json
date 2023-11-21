@@ -14,6 +14,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "types": ["node", "googleapis"],
     "plugins": [
       {
         "name": "next"
@@ -34,6 +35,8 @@
     ".next/types/**/*.ts",
     "app/lib/placeholder-data.js",
     "scripts/seed.js",
+    "types/**/*.d.ts",
+    "app/**/*.d.ts" 
     
   ],
   "exclude": ["node_modules"]

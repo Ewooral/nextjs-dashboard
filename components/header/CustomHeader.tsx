@@ -1,28 +1,29 @@
 import Link from "next/link";
 import React from "react";
 import CustomSearch from "../customSearch/CustomSearch";
+
 const CustomHeader = () => {
-  const MenuList = [
+  const MenuList: MenuList = [
     {
       name: "Dashboard",
-      icon: "dashboard",
+      // icon: "dashboard",
       path: "/dashboard",
     },
 
     {
       name: "Register",
-      icon: "Register",
+      // icon: "Register",
       path: "/register",
     },
     {
       name: "Login",
-      icon: "Login",
+      // icon: "Login",
       path: "/login",
     },
     {
       name: <CustomSearch />,
-      icon: "search",
-      path: "",
+      // icon: "",
+      path: ``,
     },
   ];
   return (
@@ -32,7 +33,7 @@ const CustomHeader = () => {
         boxShadow: "1px 2px 1px #282828c7",
       }}
     >
-      <article className="flex justify-center flex-row gap-8 align-middle items-center list-none" >
+      <article className="flex justify-center flex-row gap-8 align-middle items-center list-none">
         <Link href={"/"}>
           <h1>EganowBible</h1>
         </Link>
